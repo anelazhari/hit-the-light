@@ -240,3 +240,24 @@ div .lightToggle {
 #wakeuptime {
   opacity: 0.3;
 }
+
+#savanna-button {
+  display: block;
+  margin-top: 260px;
+  width: 100%;
+  height: 60px;
+}
+
+#sunset-button {
+  display: block;
+  margin-top: 25px;
+  width: 100%;
+  height: 60px;
+}
+
+#twilight-button {
+  display: block;
+  margin-top: 25px;
+  width: 100%;
+  height: 60px;
+}

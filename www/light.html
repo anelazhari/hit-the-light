@@ -17,19 +17,19 @@
     <div class="light-back-button" onclick="lightsBackButton()">
       <ons-icon icon="md-back"></ons-icon>
     </div>
-    <h1>This is the morning pag</h1>
   </div>
   <div id="light-therapy" style="display:none;">
     <div class="light-back-button" onclick="lightsBackButton()">
       <ons-icon icon="md-back"></ons-icon>
     </div>
-    <h1>This is the therapy pag</h1>
   </div>
   <div id="light-evening" style="display:none;">
     <div class="light-back-button" onclick="lightsBackButton()">
       <ons-icon icon="md-back"></ons-icon>
     </div>
-    <h1>This is the evening pag</h1>
+    <div id="savanna-button" onclick="turnOnSavannah()"></div>
+    <div id="sunset-button" onclick="turnOnSunset()"></div>
+    <div id="twilight-button" onclick="turnOnTwilight()"></div>
   </div>
 
   <script>
@@ -50,6 +50,19 @@
     function lightEvening() {
       document.getElementById('light-cards').style.display = 'none'
       document.getElementById('light-evening').style.display = 'block'
+    }
+
+    function turnOnSavannah () {
+      bluetooth.write('S2541961598');
+    }
+
+    function turnOnSunset () {
+      bluetooth.write('S2491970768');
+
+    }
+
+    function turnOnTwilight () {
+      bluetooth.write('S0001361948');
     }
 
     function lightsBackButton() {
