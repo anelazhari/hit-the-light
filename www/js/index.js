@@ -85,4 +85,8 @@ var app = {
     }
 };
 
+var showAlert = function() {
+    ons.notification.alert('Alert!');
+  };
+
 app.initialize();
