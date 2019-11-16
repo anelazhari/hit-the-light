@@ -1,18 +1,42 @@
 var DEVICE_ID = "00:14:01:17:10:88";
 
+class dataStore {
+    constructor () {
+        this.currentLevel = 0;
+    };
+
+    brighter() {
+        if (this.currentLevel < 4) {
+            this.currentLevel++
+        }
+    }
+
+    dimmer() {
+        if (this.currentLevel > 1) {
+            this.currentLevel--
+        }
+    }
+}
+
 var app = {
     // Application Constructor
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+
     },
+
+    data: new dataStore(),
 
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
 
         var bright = document.querySelector('.bright');
         var low = document.querySelector('.low');
+        var disconnect = document.querySelector('.disconnect');
+
         bright.onclick = app.bright;
         low.onclick = app.low;
+        disconnect.onclick = app.disconnect;
 
         var div = document.querySelector('.app');
         app.info("Scanning!!");
@@ -24,7 +48,7 @@ var app = {
         // ble.scan([], 10, app.onDeviceDiscovered);
 
         // ble.connect(DEVICE_ID, app.connectCallback, app.disconnectCallback);
-        setTimeout(app.scanComplete, 105000);
+        setTimeout(app.scanComplete, 10500);
     },
 
     onDeviceDiscovered: function(peripheral) {
@@ -46,14 +70,25 @@ var app = {
         infotext.innerHTML = info;
     },
 
-    bright: function(info) {
-        app.info('BRIGHT');
-        bluetoothSerial.write("4", app.log, app.log);
+    bright: function() {
+        app.data.brighter();
+        var level = app.data.currentLevel.toString();
+        app.info('Update level to' + level);
+        bluetoothSerial.write(level, app.log, app.log);
     },
 
-    low: function(info) {
-        app.info('LOW');
-        bluetoothSerial.write("1", app.log, app.log);
+    low: function() {
+        app.data.dimmer();
+        var level = app.data.currentLevel.toString();
+        app.info('Update level to' + level);
+        bluetoothSerial.write(level, app.log, app.log);
+
+    },
+
+    disconnect: function() {
+        bluetoothSerial.disconnect( function () {
+            app.info('Disconnected')
+        });
 
     },
 
