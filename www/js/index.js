@@ -18,6 +18,8 @@ class dataStore {
     }
 }
 
+const state = new dataStore();
+
 var app = {
     onDeviceReady: function() {
         app.info("Scanning!!");
@@ -50,15 +52,15 @@ var app = {
     },
 
     bright: function() {
-        dataStore.brighter();
-        var level = dataStore.currentLevel.toString();
+        store.brighter();
+        var level = store.currentLevel.toString();
         app.info('Update level to' + level);
         bluetoothSerial.write(level, app.log, app.log);
     },
 
     low: function() {
-        dataStore.dimmer();
-        var level = dataStore.currentLevel.toString();
+        store.dimmer();
+        var level = store.currentLevel.toString();
         app.info('Update level to' + level);
         bluetoothSerial.write(level, app.log, app.log);
 
