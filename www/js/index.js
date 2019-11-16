@@ -50,15 +50,15 @@ var app = {
     },
 
     bright: function() {
-        app.data.brighter();
-        var level = app.data.currentLevel.toString();
+        dataStore.brighter();
+        var level = dataStore.currentLevel.toString();
         app.info('Update level to' + level);
         bluetoothSerial.write(level, app.log, app.log);
     },
 
     low: function() {
-        app.data.dimmer();
-        var level = app.data.currentLevel.toString();
+        dataStore.dimmer();
+        var level = dataStore.currentLevel.toString();
         app.info('Update level to' + level);
         bluetoothSerial.write(level, app.log, app.log);
 
