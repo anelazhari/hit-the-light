@@ -24,7 +24,8 @@
     "plugins": {
       "cordova-plugin-whitelist": {},
       "cordova-plugin-ble-central": {},
-      "cordova-plugin-bluetooth-serial": {}
+      "cordova-plugin-bluetooth-serial": {},
+      "cordova-plugin-geolocation": {}
     },
     "platforms": [
       "android"
