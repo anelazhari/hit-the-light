@@ -1,9 +1,60 @@
 <ons-page id="mood" class="mood-background">
-  <h1 style="text-align: center;">Mood!</h1>
+  <div id="mood-cards" style="display: block;">
+    <div class="mood-card" onclick="moodTracker()">
+      <h2>mood tracker</h2>
+      <p>daily journal to track your mood</p>
+    </div>
+    <div class="mood-card" onclick="moodActivities()">
+      <h2>activities</h2>
+      <p>exercises and winter activities</p>
+    </div>
+    <div class="mood-card" onclick="moodStrategies()">
+      <h2>strategies</h2>
+      <p>makes you feel better</p>
+    </div>
+  </div>
+  <div id="mood-tracker" style="display:none;">
+    <div class="mood-back-button" onclick="moodsBackButton()">
+      <ons-icon icon="md-back"></ons-icon>
+    </div>
+  </div>
+  <div id="mood-activities" style="display:none;">
+    <div class="mood-back-button" onclick="moodsBackButton()">
+      <ons-icon icon="md-back"></ons-icon>
+    </div>
+  </div>
+  <div id="mood-strategies" style="display:none;">
+    <div class="mood-back-button" onclick="moodsBackButton()">
+      <ons-icon icon="md-back"></ons-icon>
+    </div>
+  </div>
 
   <script>
-    ons.getScriptPage().onShow = function() {
+    ons.getScriptPage().onShow = function () {
       bluetooth.write('S2551022558');
     };
+
+    function moodTracker() {
+      document.getElementById('mood-cards').style.display = 'none'
+      document.getElementById('mood-tracker').style.display = 'block'
+    }
+
+    function moodActivities() {
+      document.getElementById('mood-cards').style.display = 'none'
+      document.getElementById('mood-activities').style.display = 'block'
+    }
+
+    function moodStrategies() {
+      document.getElementById('mood-cards').style.display = 'none'
+      document.getElementById('mood-strategies').style.display = 'block'
+    }
+
+    function moodsBackButton() {
+      document.getElementById('mood-cards').style.display = 'block'
+      document.getElementById('mood-tracker').style.display = 'none'
+      document.getElementById('mood-activities').style.display = 'none'
+      document.getElementById('mood-strategies').style.display = 'none'
+
+    }
   </script>
 </ons-page>
