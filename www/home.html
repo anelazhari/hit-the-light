@@ -1,3 +1,12 @@
-<ons-page id="home">
-  <h1 style="text-align: center;">Home!</h1>
+<ons-page id="home" class="home-background">
+  <img src="./img/light.png" alt="Light" class="home-image"/>
+  <p id="hello-message">Hello there</p>
+  <script>
+    ons.getScriptPage().onShow = function() {
+      bluetooth.write('S2551531028');
+      var helloP = document.querySelector("#hello-message");
+      helloP.innerHTML = 'Hello there, ' + currentState.name;
+
+    };
+  </script>
 </ons-page>

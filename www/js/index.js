@@ -1,26 +1,21 @@
-class dataStore {
-    constructor () {
-        this.currentLevel = 0;
-    };
-
+var currentState = {
+    name: '',
+    currentLevel: 0,
     brighter() {
-        if (this.currentLevel < 4) {
-            this.currentLevel++
+        if (currentState.currentLevel < 4) {
+            currentState.currentLevel++
         }
-    }
-
+    },
     dimmer() {
-        if (this.currentLevel > 1) {
-            this.currentLevel--
+        if (currentState.currentLevel > 1) {
+            currentState.currentLevel--
         }
     }
 }
 
-const state = new dataStore();
-
 var app = {
     onDeviceReady: function() {
-        app.info("Scanning!!");
+        currentState.name = 'Anubis Sr,'
         bluetooth.connect();
     },
 
@@ -29,35 +24,27 @@ var app = {
     },
 
     info: function(info) {
-        // update the UI indicating the scan is complete
-        var infotext = document.querySelector('.info-text');
-        infotext.innerHTML = info;
     },
 
     status: function(info) {
-        // update the UI indicating the scan is complete
-        var infotext = document.querySelector('.status-text');
-        infotext.innerHTML = info;
     },
 
-    error: function(info) {
-        // update the UI indicating the scan is complete
-        var infotext = document.querySelector('.error-text');
-        infotext.innerHTML = info;
+    error: function(message) {
+        ons.notification.alert(message)
     },
 
     bright: function() {
-        state.brighter();
-        var level = state.currentLevel.toString();
+        currentState.brighter();
+        var level = currentState.currentLevel.toString();
         app.info('Update level to' + level);
-        bluetooth.write('SXaa');
+        bluetooth.write('S2552552550');
     },
 
     low: function() {
-        state.dimmer();
-        var level = state.currentLevel.toString();
+        currentState.dimmer();
+        var level = currentState.currentLevel.toString();
         app.info('Update level to' + level);
-        bluetooth.write(level);
+        bluetooth.write('S0000500500');
 
     },
 

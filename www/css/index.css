@@ -9,8 +9,9 @@ body {
   -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
   background-color:#E4E4E4;
   background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-  font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
+  font-family: 'Varela Round', system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
   font-size:12px;
+  color: #FFF;
   height:100vh;
   margin:0px;
   padding:0px;
@@ -18,7 +19,6 @@ body {
   padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-right, 0px);
   width:100%;
 }
-
 
 h1 {
   font-family: 'Varela Round', sans-serif;
@@ -66,6 +66,38 @@ h1 {
     -webkit-animation:fade 3000ms infinite;
 }
 
-#home .page__background {
-  background-image: url('../img/Splash.png') !important;
+.home-background .page__background{
+  background-image: url('../img/kaamosArtboard 6.jpg') !important;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.light-background .page__background{
+  background-image: url('../img/light-background.png') !important;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.mood-background .page__background{
+  background-image: url('../img/kaamosArtboard 3.jpg') !important;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.home-image {
+  display: block;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+#hello-message {
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Varela Round', system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
+  color: #FFF;
 }

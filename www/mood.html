@@ -1,3 +1,9 @@
-<ons-page id="mood">
+<ons-page id="mood" class="mood-background">
   <h1 style="text-align: center;">Mood!</h1>
+
+  <script>
+    ons.getScriptPage().onShow = function() {
+      bluetooth.write('S2551022558');
+    };
+  </script>
 </ons-page>
