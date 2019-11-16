@@ -66,6 +66,31 @@ h1 {
     -webkit-animation:fade 3000ms infinite;
 }
 
-#home .page__background {
-  background-image: url('../img/Splash.png') !important;
+.home-background .page__background{
+  background-image: url('../img/kaamosArtboard 6.jpg') !important;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.light-background .page__background{
+  background-image: url('../img/light-background.png') !important;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.mood-background .page__background{
+  background-image: url('../img/kaamosArtboard 3.jpg') !important;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.home-image {
+  display: block;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
