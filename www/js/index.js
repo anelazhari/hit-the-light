@@ -1,10 +1,33 @@
 var DEVICE_ID = "00:14:01:17:10:88";
 
+class dataStore {
+    constructor () {
+        this.currentLevel = 0;
+    };
+
+    brighter() {
+        if (this.currentLevel < 4) {
+            this.currentLevel++
+        }
+    }
+
+    dimmer() {
+        if (this.currentLevel > 1) {
+            this.currentLevel--
+        }
+    }
+}
+
 var app = {
     onDeviceReady: function() {
         app.info("Scanning!!");
         bluetoothSerial.connect(DEVICE_ID, app.connectCallback, app.disconnectCallback);
-        setTimeout(app.scanComplete, 105000);
+
+        // scan for any BLE devices for 10 seconds
+        // ble.scan([], 10, app.onDeviceDiscovered);
+
+        // ble.connect(DEVICE_ID, app.connectCallback, app.disconnectCallback);
+        setTimeout(app.scanComplete, 10500);
     },
 
     onDeviceDiscovered: function(peripheral) {
@@ -26,14 +49,25 @@ var app = {
         infotext.innerHTML = info;
     },
 
-    bright: function(info) {
-        app.info('BRIGHT');
-        bluetoothSerial.write("4", app.log, app.log);
+    bright: function() {
+        app.data.brighter();
+        var level = app.data.currentLevel.toString();
+        app.info('Update level to' + level);
+        bluetoothSerial.write(level, app.log, app.log);
     },
 
-    low: function(info) {
-        app.info('LOW');
-        bluetoothSerial.write("1", app.log, app.log);
+    low: function() {
+        app.data.dimmer();
+        var level = app.data.currentLevel.toString();
+        app.info('Update level to' + level);
+        bluetoothSerial.write(level, app.log, app.log);
+
+    },
+
+    disconnect: function() {
+        bluetoothSerial.disconnect( function () {
+            app.info('Disconnected')
+        });
 
     },
 
