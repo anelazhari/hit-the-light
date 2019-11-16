@@ -1,0 +1,82 @@
+
+
+.mood-card {
+  height: 155px;
+  width: 85%;
+  text-align: center;
+  display: block;
+  margin-top: 10%;
+  margin-bottom: -5%;
+  margin-left: auto;
+  margin-right: auto;
+  /* border-radius: 40px; */
+}
+
+.mood-card h2 {
+  font-size: 26px;
+  margin-top: 0px;
+  text-align: center;
+  font-family: 'Varela Round', system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
+  color: #FFF;
+  padding-top: 50px;
+}
+
+.mood-card p {
+  font-size: 12px;
+  margin-top: -10px;
+  text-align: center;
+  font-family: 'Varela Round', system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
+  color: #FFF;
+}
+
+.mood-card:nth-child(1) {
+  margin-top: 100px; /* First item needs to be a bit more down */
+
+  background-image: url('../img/btn_background_green.png') !important;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.mood-card:nth-child(2) {
+  background-image: url('../img/btn_background_yellow.png') !important;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+.mood-card:nth-child(3) {
+  background-image: url('../img/btn_background_pink.png') !important;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.mood-back-button {
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+  display: block;
+  background-color: white;
+}
+
+#mood-tracker {
+  height: 100%;
+  background-image: url('../img/mood_tracker_background.png') !important;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+#mood-activities {
+  height: 100%;
+  background-image: url('../img/mood_activities_background.png') !important;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+#mood-strategies {
+  height: 100%;
+  background-image: url('../img/mood_strategies_background.png') !important;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}

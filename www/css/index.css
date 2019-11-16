@@ -154,19 +154,19 @@ h1 {
 .light-card:nth-child(1) {
   margin-top: 100px; /* First item needs to be a bit more down */
 
-  background-image: url('../img/light_schedule.png') !important;
+  background-image: url('../img/btn_background_yellow.png') !important;
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
 }
 .light-card:nth-child(2) {
-  background-image: url('../img/light_therapy.png') !important;
+  background-image: url('../img/btn_background_pink.png') !important;
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
 }
 .light-card:nth-child(3) {
-  background-image: url('../img/light_evening.png') !important;
+  background-image: url('../img/btn_background_green.png') !important;
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
