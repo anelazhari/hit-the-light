@@ -1,29 +1,63 @@
 <ons-page id="light" class="center light-background">
-  <!--
-  <h1 style="text-align: center;">Light!</h1>
-  <ons-button onclick="app.showAlert()">Click Me</ons-button>
-
-  <button class="bright" onclick="app.bright()">Bright</button>
-  <button class="low" onclick="app.low()">Low</button>
-  <button class="disconnect" onclick="app.disconnect()">Disconnect</button>
-  <button class="reconnect" onclick="app.reconnect()">ReConnect</button>
-  -->
-  <div class="light-card">
-    <h2>morning schedule</h2>
-    <p>adjust your wake-up time</p>
+  <div id="light-cards" style="display: block;">
+    <div class="light-card" onclick="lightMorning()">
+      <h2>morning schedule</h2>
+      <p>adjust your wake-up time</p>
+    </div>
+    <div class="light-card" onclick="lightTherapy()">
+      <h2>light therapy</h2>
+      <p>spend a moment with the light</p>
+    </div>
+    <div class="light-card" onclick="lightEvening()">
+      <h2>evening moods</h2>
+      <p>enjoy an augumented sunset</p>
+    </div>
   </div>
-  <div class="light-card">
-    <h2>light therapy</h2>
-    <p>spend a moment with the light</p>
+  <div id="light-morning" style="display:none;">
+    <div class="light-back-button" onclick="lightsBackButton()">
+      <ons-icon icon="md-back"></ons-icon>
+    </div>
+    <h1>This is the morning pag</h1>
   </div>
-  <div class="light-card">
-    <h2>evening moods</h2>
-    <p>enjoy an augumented sunset</p>
+  <div id="light-therapy" style="display:none;">
+    <div class="light-back-button" onclick="lightsBackButton()">
+      <ons-icon icon="md-back"></ons-icon>
+    </div>
+    <h1>This is the therapy pag</h1>
+  </div>
+  <div id="light-evening" style="display:none;">
+    <div class="light-back-button" onclick="lightsBackButton()">
+      <ons-icon icon="md-back"></ons-icon>
+    </div>
+    <h1>This is the evening pag</h1>
   </div>
 
   <script>
     ons.getScriptPage().onShow = function () {
       bluetooth.write('S2552551558');
     };
+
+    function lightMorning() {
+      document.getElementById('light-cards').style.display = 'none'
+      document.getElementById('light-morning').style.display = 'block'
+    }
+
+    function lightTherapy() {
+      document.getElementById('light-cards').style.display = 'none'
+      document.getElementById('light-therapy').style.display = 'block'
+    }
+
+    function lightEvening() {
+      document.getElementById('light-cards').style.display = 'none'
+      document.getElementById('light-evening').style.display = 'block'
+    }
+
+    function lightsBackButton() {
+      document.getElementById('light-cards').style.display = 'block'
+      document.getElementById('light-morning').style.display = 'none'
+      document.getElementById('light-therapy').style.display = 'none'
+      document.getElementById('light-evening').style.display = 'none'
+
+    }
   </script>
 </ons-page>
