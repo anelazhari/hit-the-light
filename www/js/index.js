@@ -19,29 +19,8 @@ class dataStore {
 }
 
 var app = {
-    // Application Constructor
-    initialize: function() {
-        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
-
-    },
-
-    data: new dataStore(),
-
     onDeviceReady: function() {
-        this.receivedEvent('deviceready');
-
-        var bright = document.querySelector('.bright');
-        var low = document.querySelector('.low');
-        var disconnect = document.querySelector('.disconnect');
-
-        bright.onclick = app.bright;
-        low.onclick = app.low;
-        disconnect.onclick = app.disconnect;
-
-        var div = document.querySelector('.app');
         app.info("Scanning!!");
-
-
         bluetoothSerial.connect(DEVICE_ID, app.connectCallback, app.disconnectCallback);
 
         // scan for any BLE devices for 10 seconds
@@ -107,6 +86,11 @@ var app = {
         app.info('We did\'nt find the device.');
     },
 
+    showAlert: function () {
+        ons.notification.alert('Alert!');
+
+    },
+
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
@@ -119,5 +103,3 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
-
-app.initialize();
