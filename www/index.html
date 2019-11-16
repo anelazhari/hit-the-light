@@ -7,6 +7,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <link href="/fonts/VarelaRound-Regular.ttf" rel="stylesheet">
 
     <link rel="stylesheet" href="css/onsenui.min.css">
     <link rel="stylesheet" href="css/onsen-css-components.min.css">
@@ -15,17 +16,11 @@
 </head>
 
 <body>
-    <ons-page class="app">
-        <ons-toolbar>
-            <div class="center">Tab 1</div>
-        </ons-toolbar>
-
-        <ons-tabbar swipeable position="bottom">
-            <ons-tab page="home.html" label="Home" icon="md-home" active>
+    <ons-page>
+        <ons-tabbar swipeable hide-tabs position="bottom">
+            <ons-tab page="login.html" label="Login" active>
             </ons-tab>
-            <ons-tab page="light.html" label="Light" icon="md-star-outline">
-            </ons-tab>
-            <ons-tab page="mood.html" label="Mood" icon="md-face">
+            <ons-tab page="app.html" label="App">
             </ons-tab>
         </ons-tabbar>
     </ons-page>
