@@ -1,11 +1,26 @@
 <ons-page id="home" class="home-background">
-  <img src="./img/light.png" alt="Light" class="home-image"/>
-  <p id="hello-message">Hello there</p>
+
+  <p id="hello-message"></p>
+  <p id="hello-message-tag">How are you feeling today?</p>
+
+  <p id="quote"></p>
+
+
+
   <script>
+
+    function getRndInteger(min, max) {
+      return Math.floor(Math.random() * (max - min) ) + min;
+    }
+
     ons.getScriptPage().onShow = function() {
       bluetooth.write('S2551531028');
       var helloP = document.querySelector("#hello-message");
-      helloP.innerHTML = 'Hello there, ' + currentState.name;
+      helloP.innerHTML = 'Hi, ' + currentState.name;
+
+
+      var quoteP = document.querySelector("#quote");
+      quoteP.textContent = quotesList[getRndInteger(0, quotesList.length)];
 
     };
   </script>
