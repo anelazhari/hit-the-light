@@ -1,0 +1,40 @@
+#login-1 .page__background {
+  background-image: url('../img/Splash.png');
+  background-size: cover;
+  background-position: center;
+}
+
+#login-2 .page__background {
+  background-image: url('../img/kaamosArtboard 7.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#login-3 .page__background {
+  background-image: url('../img/kaamosArtboard 3.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#login-4 .page__background {
+  background-image: url('../img/kaamosArtboard 5.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#login-2 {
+  text-align: center;
+}
+
+#login-2 p {
+  font-family: 'Varela Round';
+  font-size: 42px;
+  color: #FFF;
+}
+
+#login-2 input {
+  font-size: 42px;
+  color: #FFF;
+  width: 250px;
+  height: 60px;
+}
