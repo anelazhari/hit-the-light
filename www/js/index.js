@@ -15,7 +15,7 @@ var currentState = {
 
 var app = {
     onDeviceReady: function() {
-        currentState.name = 'Anubis Sr,'
+        currentState.name = 'Paulo';
         bluetooth.connect();
     },
 
