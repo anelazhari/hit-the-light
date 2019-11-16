@@ -1,3 +1,27 @@
-<ons-page id="home">
-  <h1 style="text-align: center;">Home!</h1>
+<ons-page id="home" class="home-background">
+
+  <p id="hello-message"></p>
+  <p id="hello-message-tag">How are you feeling today?</p>
+
+  <p id="quote"></p>
+
+
+
+  <script>
+
+    function getRndInteger(min, max) {
+      return Math.floor(Math.random() * (max - min) ) + min;
+    }
+
+    ons.getScriptPage().onShow = function() {
+      bluetooth.write('S2551531028');
+      var helloP = document.querySelector("#hello-message");
+      helloP.innerHTML = 'Hi, ' + currentState.name;
+
+
+      var quoteP = document.querySelector("#quote");
+      quoteP.textContent = quotesList[getRndInteger(0, quotesList.length)];
+
+    };
+  </script>
 </ons-page>
