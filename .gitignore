@@ -1,0 +1,6 @@
+# App platform binaries and built files
+/platforms
+node_modules
+typings/
+package-lock.json
+plugins/
