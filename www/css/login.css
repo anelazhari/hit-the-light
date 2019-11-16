@@ -1,5 +1,5 @@
 #login-1 .page__background {
-  background-image: url('../img/Splash.png');
+  background-image: url('../img/Splash-animation.gif');
   background-size: cover;
   background-position: center;
 }
@@ -22,19 +22,74 @@
   background-position: center;
 }
 
-#login-2 {
+#login {
   text-align: center;
 }
 
 #login-2 p {
   font-family: 'Varela Round';
-  font-size: 42px;
+  font-size: 36px;
   color: #FFF;
+  margin-top: 20px;
 }
 
 #login-2 input {
-  font-size: 42px;
+  font-size: 36px;
   color: #FFF;
   width: 250px;
   height: 60px;
+  text-align: center;
+}
+
+#login-2 .light-image {
+  display: block;
+  margin-top: 10%;
+  margin-bottom: -5%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+#login-3 .space {
+  height: 160px;
+}
+
+#login-3 p {
+  font-family: 'Varela Round';
+  font-size: 38px;
+  color: #FFF;
+}
+
+#login-3 span {
+  font-size: 16px;
+  margin-right: 16px;
+}
+
+#login-3 input {
+  text-align: center;
+  font-size: 36px;
+  color: #FFF;
+  width: 200px;
+  height: 60px;
+}
+
+#login-4 p {
+  font-family: 'Varela Round';
+  font-size: 38px;
+  color: #FFF;
+}
+
+#login-4 .light-image {
+  display: block;
+  margin-top: 10%;
+  margin-bottom: -5%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.range-component {
+  width: 80%;
+  size: 20px;
+  line-height: 10px;
 }
