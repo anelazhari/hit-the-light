@@ -81,5 +81,21 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+    },
+
+    updateMoodRange: function (value) {
+        if (value <= 12.5) {
+            document.getElementById('mood-image').src = "./img/mood/0.png";
+        } else if ( value <= 25) {
+            document.getElementById('mood-image').src = "./img/mood/1.png";
+        } else if ( value <= 50) {
+            document.getElementById('mood-image').src = "./img/mood/2.png";
+        } else if ( value <= 75) {
+            document.getElementById('mood-image').src = "./img/mood/3.png";
+        } else if ( value <= 87.5) {
+            document.getElementById('mood-image').src = "./img/mood/4.png";
+        } else {
+            document.getElementById('mood-image').src = "./img/mood/5.png";
+        }
     }
 };

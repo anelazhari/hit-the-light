@@ -72,3 +72,24 @@
   width: 200px;
   height: 60px;
 }
+
+#login-4 p {
+  font-family: 'Varela Round';
+  font-size: 38px;
+  color: #FFF;
+}
+
+#login-4 .light-image {
+  display: block;
+  margin-top: 10%;
+  margin-bottom: -5%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.range-component {
+  width: 80%;
+  size: 20px;
+  line-height: 10px;
+}
