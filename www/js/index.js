@@ -1,5 +1,8 @@
 var currentState = {
     name: '',
+    on: true,
+    wakeUpTime: '7:30',
+    sleepTime: '9.30',
     currentLevel: 0,
     brighter() {
         if (currentState.currentLevel < 4) {

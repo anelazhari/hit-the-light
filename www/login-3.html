@@ -6,10 +6,19 @@
   <br> <br>
   <p>
     <span>wake up</span>
-    <ons-input id="time" modifier="underbar" type="time"></ons-input>
+    <ons-input id="time" modifier="underbar" type="time" onchange="updateWakeUp(this.value)"></ons-input>
   </p>
   <p>
     <span>sleep &nbsp;&nbsp;&nbsp;</span>
-    <ons-input id="time" modifier="underbar" type="time"></ons-input>
+    <ons-input id="time" modifier="underbar" type="time" onchange="updateSleep(this.value)"></ons-input>
   </p>
+
+  <script>
+      var updateWakeUp = function (val) {
+        currentState.wakeUpTime = val;
+      };
+      var updateSleep = function (val) {
+        currentState.sleepTime = val;
+      };
+  </script>
 </ons-page>
