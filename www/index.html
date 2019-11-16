@@ -21,31 +21,15 @@
         </ons-toolbar>
 
         <ons-tabbar swipeable position="bottom">
-            <ons-tab page="light.html" label="Light" icon="md-home" active>
+            <ons-tab page="home.html" label="Home" icon="md-home" active>
             </ons-tab>
-            <ons-tab page="mood.html" label="Mood" icon="md-settings" active-icon="md-face">
+            <ons-tab page="light.html" label="Light" icon="md-star-outline">
+            </ons-tab>
+            <ons-tab page="mood.html" label="Mood" icon="md-face">
             </ons-tab>
         </ons-tabbar>
     </ons-page>
 
-    <template id="light.html">
-        <ons-page id="light" class="center">
-            <h1 style="text-align: center;">Light!</h1>
-            <ons-button onclick="app.showAlert()">Click Me</ons-button>
-
-            <button class="bright" onclick="app.bright()">Bright</button>
-            <button class="low" onclick="app.low()">Low</button>
-            <button class="disconnect">Disconnect</button>
-
-            <p class="info-text">This is info text</p>
-        </ons-page>
-    </template>
-
-    <template id="mood.html">
-        <ons-page id="mood">
-            <h1 style="text-align: center;">Mood!</h1>
-        </ons-page>
-    </template>
     <script type="text/javascript" src="js/onsenui.min.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
