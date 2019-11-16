@@ -1,29 +1,9 @@
 var DEVICE_ID = "00:14:01:17:10:88";
 
 var app = {
-    // Application Constructor
-    initialize: function() {
-        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
-    },
-
     onDeviceReady: function() {
-        this.receivedEvent('deviceready');
-
-        var bright = document.querySelector('.bright');
-        var low = document.querySelector('.low');
-        bright.onclick = app.bright;
-        low.onclick = app.low;
-
-        var div = document.querySelector('.app');
         app.info("Scanning!!");
-
-
         bluetoothSerial.connect(DEVICE_ID, app.connectCallback, app.disconnectCallback);
-
-        // scan for any BLE devices for 10 seconds
-        // ble.scan([], 10, app.onDeviceDiscovered);
-
-        // ble.connect(DEVICE_ID, app.connectCallback, app.disconnectCallback);
         setTimeout(app.scanComplete, 105000);
     },
 
@@ -72,6 +52,11 @@ var app = {
         app.info('We did\'nt find the device.');
     },
 
+    showAlert: function () {
+        ons.notification.alert('Alert!');
+
+    },
+
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
@@ -84,9 +69,3 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
-
-var showAlert = function() {
-    ons.notification.alert('Alert!');
-  };
-
-app.initialize();
