@@ -37,7 +37,7 @@ var app = {
         //var peripheralString = JSON.stringify(peripheral, null, 2);
         //console.log(peripheralString);
         if (peripheral.id.startsWith('00:14')) {
-            var div = document.querySelector('.app');
+            var div = document.querySelector('#app');
             var pre = document.createElement('pre');
             pre.innerText = peripheral.name + '/' + peripheral.id;
             div.appendChild(pre);
