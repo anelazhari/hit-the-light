@@ -4,3 +4,5 @@ node_modules
 typings/
 package-lock.json
 plugins/
+
+.DS_Store
