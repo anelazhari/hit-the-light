@@ -17,6 +17,15 @@
     <div class="light-back-button" onclick="lightsBackButton()">
       <ons-icon style="color: white; margin: 20px 0 0 20px" size="26px" icon="md-arrow-back"></ons-icon>
     </div>
+    <div id="light-morning-content">
+      <p>
+        <span>wake up</span>
+        <ons-input id="wake-up-time-light" modifier="underbar" onchange="updateWakeUp(this.value)" value="1:23">
+        </ons-input>
+      </p>
+
+      <!-- <ons-range class="range-component" value="50"></ons-range> -->
+    </div>
   </div>
   <div id="light-therapy" style="display:none;">
     <div class="light-back-button" onclick="lightsBackButton()">
@@ -35,6 +44,10 @@
   <script>
     ons.getScriptPage().onShow = function () {
       bluetooth.write('S2552551558');
+
+      // Not working :(
+      document.querySelector("#wake-up-time-light").value = currentState.wakeUpTime;
+      // ons.notification.alert(`CHanging wake up time to ${currentState.wakeUpTime}`)
     };
 
     function lightMorning() {
@@ -52,16 +65,16 @@
       document.getElementById('light-evening').style.display = 'block'
     }
 
-    function turnOnSavannah () {
+    function turnOnSavannah() {
       bluetooth.write('S2541961598');
     }
 
-    function turnOnSunset () {
+    function turnOnSunset() {
       bluetooth.write('S2491970768');
 
     }
 
-    function turnOnTwilight () {
+    function turnOnTwilight() {
       bluetooth.write('S0001361948');
     }
 

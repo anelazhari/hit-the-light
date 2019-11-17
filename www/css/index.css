@@ -186,6 +186,33 @@ h1 {
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
 }
+
+#light-morning-content {
+  margin-top: 360px;
+  margin-left: 60px;
+  margin-right: auto;
+  width: 100%;
+}
+
+#light-morning p {
+  font-family: 'Varela Round';
+  font-size: 38px;
+  color: #FFF;
+}
+
+#light-morning span {
+  font-size: 16px;
+  margin-right: 16px;
+}
+
+#light-morning input {
+  text-align: center;
+  font-size: 36px;
+  color: #FFF;
+  width: 200px;
+  height: 60px;
+}
+
 #light-therapy {
   height: 100%;
   background-image: url('../img/light-therapy-new.png') !important;
