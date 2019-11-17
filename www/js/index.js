@@ -76,16 +76,22 @@ var app = {
     updateMoodRange: function (value) {
         if (value <= 12.5) {
             document.getElementById('mood-image').src = "./img/mood/0.png";
+            bluetooth.write('S0380471919');
         } else if ( value <= 25) {
             document.getElementById('mood-image').src = "./img/mood/1.png";
+            bluetooth.write('S0951372099');
         } else if ( value <= 50) {
+            bluetooth.write('S1252060789');
             document.getElementById('mood-image').src = "./img/mood/2.png";
         } else if ( value <= 75) {
+            bluetooth.write('S2282400579');
             document.getElementById('mood-image').src = "./img/mood/3.png";
         } else if ( value <= 87.5) {
+            bluetooth.write('S2531590179');
             document.getElementById('mood-image').src = "./img/mood/4.png";
         } else {
             document.getElementById('mood-image').src = "./img/mood/5.png";
+            bluetooth.write('M0000000009');
         }
     }
 };
