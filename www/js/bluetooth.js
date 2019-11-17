@@ -16,6 +16,7 @@ var bluetooth = {
 
     connectCallback: function() {
         app.status('Connected');
+        bluetooth.write('P2322322323');
     },
 
     disconnectCallback: function() {
