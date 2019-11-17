@@ -267,7 +267,7 @@ div .lightToggle {
   opacity: 0.3;
 }
 
-#light-therapy {
+#light-therapy-schedule {
   opacity: 0.3;
 }
 
@@ -308,4 +308,21 @@ div .lightToggle {
   border-radius: 30px;
   padding: 15px;
   margin: 10px 20px 10px 20px;
+}
+
+#winter-activities-content {
+  margin-top: 80%;
+  height: 60%;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Varela Round', system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
+  color: #FFF;
+  overflow-y: scroll;
+}
+
+#winter-activities-content div{
+  background-color: rgba(240, 240, 240, 0.3);
+  border-radius: 30px;
+  padding: 15px;
+  margin: 10px;
 }
