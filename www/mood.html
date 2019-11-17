@@ -19,8 +19,8 @@
     </div>
     <div class="tracker-content">
       <div>track mood</div>
+      <div onclick="takeTheTest()">take the test</div>
       <div>calendar</div>
-      <div>take the test</div>
     </div>
   </div>
   <div id="mood-activities" style="display:none;">
@@ -45,7 +45,7 @@
     </div>
     <div class="strategies-content">
       <div>Meditation</div>
-      <div>Breathing</div>
+      <div onclick="breathe(this.value)">Breathing</div>
       <div>Get grounded</div>
     </div>
   </div>
@@ -54,6 +54,15 @@
     ons.getScriptPage().onShow = function () {
       bluetooth.write('S2551022558');
     };
+
+    var breathe = function (value) {
+      // alert('Yeah');
+    }
+
+    var takeTheTest = function () {
+      window.open('https://www.mielenterveystalo.fi/aikuiset/itsearviointi/Pages/BDI.aspx', '_system');
+      return false;
+    }
 
     function moodTracker() {
       document.getElementById('mood-cards').style.display = 'none'
